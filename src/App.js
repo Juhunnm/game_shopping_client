@@ -1,24 +1,42 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import './App.css';
+import { Routes ,Route} from 'react-router-dom';
 import axios from 'axios';
-const App = () => {
-    const [data,setData]=useState("");
+import Signup from './components/Signup';
+import Login from './components/Login';
+import GameBoard from './components/GameBoard';
+import SuggestBoard from './components/SuggestBoard';
+import Header from './Header';
+import MarketBoard from './components/MarketBoard';
 
-    useEffect(()=>{
-        axios.get("http://localhost:8080/api/data")
-        .then((res)=>{
-            setData(res.data);
-        })
-        .catch((err)=>{
-            console.log("ERR data : ",err);
-        })
-    },[])
+function App() {
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/test')
+      .then(res => {
+        setMessage(res.data);
+      })
+      .catch(err => {
+        console.error('Error fetching the message:', err);
+      });
+  }, []);
+
   return (
-    <div>
-      <h1>수정</h1>
-        <h1>Respoense from spring boot : </h1>
-      {data}
+    <div className="App">
+      <Header />
+        <Routes>
+            <Route path='/gameboard' element={<GameBoard />} /> 
+            <Route path='/suggestboard' element={<SuggestBoard />} />  
+            <Route path='/marketboard'element={<MarketBoard />} />    
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<h1>Welcome to the React App</h1>} />
+        </Routes>
+        {message}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
