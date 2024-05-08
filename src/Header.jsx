@@ -25,8 +25,9 @@ const Header = () => {
     <header style={headerStyle}>
       <Link to="/" style={{...linkStyle, fontWeight: 'bold'}}>LOGO</Link>
       <ul style={navStyle}>
-        <li><Link to="/gameboard" style={linkStyle}>게임게시판</Link></li>
-        <li><Link to="/Marketboard" style={linkStyle}>시세 게시판</Link></li>
+        <li><Link to="/gameboard" style={linkStyle}>게임 게시판</Link></li>
+        <li><Link to="/popularboard" style={linkStyle}>인기글 게시판</Link></li>
+        <li><Link to="/marketboard" style={linkStyle}>시세 게시판</Link></li>
         <li><Link to="/suggestboard" style={linkStyle}>건의 게시판</Link></li>
       </ul>
       <div>

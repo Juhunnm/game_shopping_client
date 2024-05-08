@@ -8,6 +8,7 @@ import GameBoard from './components/GameBoard';
 import SuggestBoard from './components/SuggestBoard';
 import Header from './Header';
 import MarketBoard from './components/MarketBoard';
+import PopularBoard from "./components/PopularBoard";
 
 function App() {
   const [message, setMessage] = useState('');
@@ -26,7 +27,8 @@ function App() {
     <div className="App">
       <Header />
         <Routes>
-            <Route path='/gameboard' element={<GameBoard />} /> 
+            <Route path='/gameboard' element={<GameBoard />} />
+            <Route path='/popularboard' element={<PopularBoard />} />
             <Route path='/suggestboard' element={<SuggestBoard />} />  
             <Route path='/marketboard'element={<MarketBoard />} />    
             <Route path="/signup" element={<Signup />} />
