@@ -9,6 +9,7 @@ import SuggestBoard from './components/SuggestBoard';
 import Header from './Header';
 import MarketBoard from './components/MarketBoard';
 import PopularBoard from "./components/PopularBoard";
+import WritePage from "./components/WritePage";
 
 function App() {
   const [message, setMessage] = useState('');
@@ -34,6 +35,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<h1>Welcome to the React App</h1>} />
+            <Route path='/write' element={<WritePage />} />
         </Routes>
         {message}
     </div>

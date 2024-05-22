@@ -1,0 +1,234 @@
+.miniHeaderSpace{
+    margin: 70px auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 370px;
+    /*height: 50px;*/
+    height: auto; /* 높이를 auto로 설정 */
+    gap: 10px 2px;
+}
+
+.miniHeaderButton{
+    background-color: #4285F4;
+    color: ivory;
+    margin: 5px;
+    border: 2px outset #4285F4;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap; /*텍스트 넘침 방지*/
+    font-size: 12px;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.gameLogoImg{
+    width: 450px;
+    height: 250px;
+    margin: 20px auto;
+}
+.mainLogoImg{
+    margin-bottom: 70px;
+}
+/*----------BoardTop----------*/
+.boardcomponent{
+    display: flex;
+    justify-content: center;
+}
+.boardTopSpace{
+    margin-top: 20px;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 600px;
+}
+.textHeader{
+    margin-top: 18px;
+}
+.searchBoxSpace{
+    display: flex; /*검색버튼*/
+    margin-top: 25px;
+}
+.searchBar{
+    border: none;
+    border-radius: 4px;
+    margin-right: 3px;
+    background-color: lightgray;
+    width: 180px;
+}
+.searchButton{
+    border: 2px outset #4285F4;
+    border-radius: 4px;
+    font-size: x-small;
+    white-space: nowrap;
+    background-color: #4285F4;
+    color: ivory;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+/*----------Board----------*/
+.boardSpace{
+    height: 360px;
+    display: flex;
+    justify-content: center;
+}
+.borderBox{
+    background-color: white;
+    height: 350px;
+    width: 55%;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    min-width: 450px;
+}
+/*----------BoardTable----------*/
+table {
+    width: 98%;
+    /*border-collapse: collapse; !*Table 테두리 하나로 병합*!*/
+    white-space: nowrap;
+    font-size: small;
+}
+tr{
+    border-radius: 5px;
+}
+.textHeaderStyle{
+    width: 7%;
+}
+.textHeaderStyleBox{
+    border: 3px outset silver;
+    border-radius: 5px;
+    background-color: gray;
+    color: ivory;
+}
+.textTitleStyle{
+    cursor: pointer;
+    width: 40%;
+    text-align: left;
+    padding-left: 40px;
+}
+.textElementStyle{
+    width: 15%;
+}
+/*----------Pagination & writeButton----------*/
+.boardBottomLine{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.bottomGuardLine{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 450px;
+}
+.pagingSpace{
+    margin: auto;
+}
+.writeButton{
+    border: 2px outset #4285F4;
+    border-radius: 4px;
+    font-size: x-small;
+    white-space: nowrap;
+    background-color: #4285F4;
+    color: ivory;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+/*----------PopularBoard.jsx----------*/
+.topSpace{
+    margin-top: 60px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middleSpace{
+    height: 300px;
+    margin-top: 60px;
+}
+.bottomSpace{
+    height: 500px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.collectionOfPosts{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 55%;
+    height: 80%;
+}
+.postName{
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+/**/
+.slick-prev:before,
+.slick-next:before {
+    color: #4285F4 !important;
+}
+.content-row {
+    background-color: silver;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.content-cell {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: small;
+}
+/*middle*/
+.popularTable{
+    display: flex;
+    justify-content: center;
+}
+.popularTableBox{
+    width: 55%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+th{
+    padding: 10px;
+}
+.popularTableBox td{
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px 5px;
+}
+.contentsBox{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.part1,
+.part2{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 75%;
+    height: 450px;
+    margin: 15px;
+    text-align: left;
+}
+.newsBox,
+.youtubeBox{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 95%;
+    height: 350px;
+    margin-left: 10px;
+}
