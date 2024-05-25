@@ -1,3 +1,4 @@
+/*--------------------GameBoard.jsx--------------------*/
 .miniHeaderSpace{
     margin: 70px auto;
     justify-content: center;
@@ -89,7 +90,6 @@
 /*----------BoardTable----------*/
 table {
     width: 98%;
-    /*border-collapse: collapse; !*Table 테두리 하나로 병합*!*/
     white-space: nowrap;
     font-size: small;
 }
@@ -140,7 +140,7 @@ tr{
     cursor: pointer;
     padding: 3px 7px;
 }
-/*----------PopularBoard.jsx----------*/
+/*--------------------PopularBoard.jsx--------------------*/
 .topSpace{
     margin-top: 60px;
     height: 300px;
@@ -154,7 +154,7 @@ tr{
 }
 .bottomSpace{
     height: 500px;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -209,26 +209,288 @@ th{
     padding: 15px 5px;
 }
 .contentsBox{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 80%;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
 }
-.part1,
+.part1{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 45%;
+    margin: 15px 10px;
+    text-align: left;
+    padding: 0 10px;
+}
 .part2{
     border: 1px solid black;
     border-radius: 5px;
-    width: 75%;
-    height: 450px;
-    margin: 15px;
+    width: 55%;
+    margin: 15px 10px;
     text-align: left;
+    padding: 0 10px;
 }
-.newsBox,
+.newsBox{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.news{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px 2px;
+}
+.gameNewsImg{
+    width: 150px;
+    height: 110px;
+    margin: 5px;
+
+}
+.newsTextBox{
+    display: flex;
+    flex-direction: column;
+}
+.gameNewsTitle{
+    font-size: small;
+}
+.gameNewsText{
+    font-size: x-small;
+}
 .youtubeBox{
     border: 1px solid black;
     border-radius: 5px;
-    width: 95%;
-    height: 350px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2px 2px;
+}
+.video{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+/*--------------------ViewPosts.jsx--------------------*/
+.viewComponent{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container1{
+    border: 1px solid;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 830px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+.postContainer{
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    padding: 10px 0 2px 0;
+}
+.postTopLine{
+    background-color: silver;
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    /*padding: 5px 5px;*/
+    margin: 0 5px;
+    justify-content: center;
+}
+.postHead{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: small;
+    width: 10%;
+    padding: 3px 0;
+}
+.postTitle{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 5px;
+    width: 40%;
+    font-size: small;
+    text-align: left;
+    padding: 3px 10px;
+}
+.postInfo{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    white-space: nowrap;
+    padding: 2px 0;
+}
+.post-nickname,
+.post-date,
+.post-views,
+.post-likes{
+    margin: 0 15px;
+    font-size: small;
+}
+.postContentsText{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: medium;
+    margin: 10px auto 0 auto;
+    height: 500px;
+    padding: 10px;
+    width: 90%;
+}
+.actionContainer{
+    display: flex;
     margin-left: 10px;
+}
+.actionLine{
+    margin: 5px 20px;
+}
+.bookmarkButton,
+.likeButton{
+    border: 2px outset gray;
+    border-radius: 4px;
+    font-size: small;
+    white-space: nowrap;
+    background-color: gray;
+    color: ivory;
+    cursor: pointer;
+    padding: 1px 5px;
+}
+.bookmarkButton{
+    margin-right: 5px;
+}
+.bookmarkButton:hover {
+    background-color: #4285F4;
+    color: white;
+}
+.likeButton:hover {
+    background-color: #4285F4;
+    color: white;
+}
+.commentContainer{
+    /*background-color: silver;*/
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.commentTitle{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+}
+.commentBox{
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+    width: 800px;
+    flex-direction: column;
+}
+.commentLine{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.userNickname{
+    background-color: white;
+    border-radius: 5px;
+    width: 15%;
+    margin-right: 10px;
+    font-size: small;
+    border: 1px solid black;
+    height: 20px;
+}
+.commentTextBox{
+    background-color: white;
+    border-radius: 5px;
+    width: 75%;
+    text-align: left;
+    padding-left: 15px;
+    font-size: small;
+    border: 1px solid black;
+}
+.writeNicknameBox{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 635px;
+}
+.writeCommentLine{
+    border-radius: 5px;
+}
+.writeCommentBox{
+    width: 85%;
+    border-radius: 5px;
+    margin-right: 5px;
+    height: 50px;
+    border: 1px solid black;
+}
+.CommentSubmitButton{
+    border: 2px outset gray;
+    border-radius: 4px;
+    font-size: small;
+    white-space: nowrap;
+    background-color: gray;
+    color: ivory;
+    cursor: pointer;
+    padding: 1px 10px;
+    height: 53px;
+}
+.CommentSubmitButton:hover {
+    background-color: #4285F4;
+    color: white;
+}
+.container2{
+    width: 800px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+.previousPost,
+.nextPost{
+    width: 300px;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: small;
+    white-space: nowrap;
+    background-color: white;
+    cursor: pointer;
+    padding: 1px 10px;
+    margin: 2px 0 0 500px;
+    color: black;
+}
+.previousPost:hover{
+    color: #4285F4;
+    font-weight: bold;
+    border: 1px solid #4285F4;
+}
+.nextPost:hover{
+    color: #4285F4;
+    font-weight: bold;
+    border: 1px solid #4285F4;
 }

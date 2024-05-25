@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header style={headerStyle}>
-      <Link to="/" style={{...linkStyle, fontWeight: 'bold'}}>LOGO</Link>
+      <Link to="/"><img src="gameLogo/MainLogo.png" alt="mainPageLogo" style={{ width: '50px', height: '40px' }}/></Link>
       <ul style={navStyle}>
         <li><Link to="/gameboard" style={linkStyle}>게임 게시판</Link></li>
         <li><Link to="/popularboard" style={linkStyle}>인기글 게시판</Link></li>
