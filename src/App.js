@@ -9,7 +9,8 @@ import SuggestBoard from './components/SuggestBoard';
 import Header from './Header';
 import MarketBoard from './components/MarketBoard';
 import PopularBoard from "./components/PopularBoard";
-import WritePage from "./components/WritePage";
+import ViewPosts from './components/ViewPosts';
+// import WritePage from "./components/WritePage";
 
 function App() {
   const [message, setMessage] = useState('');
@@ -29,13 +30,14 @@ function App() {
       <Header />
         <Routes>
             <Route path='/gameboard' element={<GameBoard />} />
+            <Route path="/viewpost/:id" element={<ViewPosts />} />
             <Route path='/popularboard' element={<PopularBoard />} />
             <Route path='/suggestboard' element={<SuggestBoard />} />  
-            <Route path='/marketboard'element={<MarketBoard />} />    
+            <Route path='/marketboard' element={<MarketBoard />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<h1>Welcome to the React App</h1>} />
-            <Route path='/write' element={<WritePage />} />
+            <Route path="/" element={<div><img src="gameLogo/MainPageBigLogo.png" alt="mainPageLogo" style={{ width: '800px', height: '600px' }}/></div>}/>
+            {/*<Route path='/write' element={<WritePage />} />*/}
         </Routes>
         {message}
     </div>
